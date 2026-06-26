@@ -1,0 +1,13 @@
+/* ─── Brand CSS custom properties ──────────────────────────────────────────── */
+/* These are used throughout the Projects feature (and elsewhere) via var(--*)  */
+:root {
+  --brand-accent:       #473bab;
+  --brand-accent-hover: #382f8f;
+  --brand-mid:          #6356e1;
+  --brand:              #473bab;
+  --brand-foreground:   #ffffff;
+  --brand-text:         #ffffff;
+  --ink:                #1f1d25;
+  --danger:             #dc2626;
+  --danger-hover:       #b91c1c;
+}
