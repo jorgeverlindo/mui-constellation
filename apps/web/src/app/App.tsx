@@ -8,24 +8,27 @@ import { WorkflowProvider } from './contexts/WorkflowContext';
 import { ComplianceProvider } from './contexts/ComplianceContext';
 import { InventoryProvider } from './contexts/InventoryContext';
 import { SnackbarHost } from './components/Snackbar';
+import { PasswordGate } from './components/PasswordGate';
 
 export default function App() {
   return (
     <ConstellationProvider>
-      <LanguageProvider>
-        <ClientProvider>
-          <FilterProvider>
-            <WorkflowProvider>
-              <ComplianceProvider>
-                <InventoryProvider>
-                  <RouterProvider router={router} />
-                  <SnackbarHost />
-                </InventoryProvider>
-              </ComplianceProvider>
-            </WorkflowProvider>
-          </FilterProvider>
-        </ClientProvider>
-      </LanguageProvider>
+      <PasswordGate>
+        <LanguageProvider>
+          <ClientProvider>
+            <FilterProvider>
+              <WorkflowProvider>
+                <ComplianceProvider>
+                  <InventoryProvider>
+                    <RouterProvider router={router} />
+                    <SnackbarHost />
+                  </InventoryProvider>
+                </ComplianceProvider>
+              </WorkflowProvider>
+            </FilterProvider>
+          </ClientProvider>
+        </LanguageProvider>
+      </PasswordGate>
     </ConstellationProvider>
   );
 }
